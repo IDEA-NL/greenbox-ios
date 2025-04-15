@@ -6,7 +6,7 @@
 	<string>production</string>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:dev.debate.si</string>
+		<string>applinks:greenbox.idebate.net</string>
 	</array>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>

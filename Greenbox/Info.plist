@@ -100,7 +100,7 @@
 	<true/>
 	<key>WKAppBoundDomains</key>
 	<array>
-		<string>dev.debate.si</string>
+		<string>greenbox.idebate.net</string>
 	</array>
 </dict>
 </plist>

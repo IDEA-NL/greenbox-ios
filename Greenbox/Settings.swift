@@ -8,11 +8,11 @@ struct Cookie {
 let gcmMessageIDKey = "00000000000" // update this with actual ID if using Firebase 
 
 // URL for first launch
-let rootUrl = URL(string: "https://dev.debate.si")!
+let rootUrl = URL(string: "https://greenbox.idebate.net")!
 
 // allowed origin is for what we are sticking to pwa domain
 // This should also appear in Info.plist
-let allowedOrigins: [String] = ["dev.debate.si"]
+let allowedOrigins: [String] = ["greenbox.idebate.net"]
 
 // auth origins will open in modal and show toolbar for back into the main origin.
 // These should also appear in Info.plist
