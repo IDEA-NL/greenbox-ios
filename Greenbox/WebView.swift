@@ -4,6 +4,10 @@ import AuthenticationServices
 import SafariServices
 
 
+// A bit of hack to prevent outlinks from opening inside the app
+// This is needed because our outlinks aren't real links, so navigationType is .other
+var ALWAYS_USE_EXTERNAL_BROWSER = true;
+
 func createWebView(container: UIView, WKSMH: WKScriptMessageHandler, WKND: WKNavigationDelegate, NSO: NSObject, VC: ViewController) -> WKWebView{
 
     let config = WKWebViewConfiguration()
@@ -140,7 +144,8 @@ extension ViewController: WKUIDelegate, WKDownloadDelegate {
                     }
                     return
                 }
-                if (navigationAction.navigationType == .other &&
+                if (!ALWAYS_USE_EXTERNAL_BROWSER &&
+                    navigationAction.navigationType == .other &&
                     navigationAction.value(forKey: "syntheticClickType") as! Int == 0 &&
                     (navigationAction.targetFrame != nil) &&
                     // no error here, fake warning
